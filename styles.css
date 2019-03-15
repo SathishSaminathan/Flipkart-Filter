@@ -1,0 +1,292 @@
+body {
+  background-color: #ededed !important;
+  font-family: "ROBOTO";
+  padding: 0;
+}
+
+.custom-container {
+  padding: 40px 20px 0 20px;
+}
+
+.custom-container .row {
+  margin: 0;
+}
+
+.custom-container .row .card-area-cont {
+  padding: 0;
+}
+
+.custom-container .row .card-area-cont .welcome {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-container .row .card-area-cont .welcome::after {
+  content: "!";
+  position: absolute;
+}
+
+.custom-container .card-area {
+  background-color: white;
+  margin: 10px 0;
+  padding: 10px 0;
+  -webkit-box-shadow: 0 0 10px 3px #d5d5d5;
+          box-shadow: 0 0 10px 3px #d5d5d5;
+  border-radius: 2px;
+}
+
+.custom-container .card-area .card1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+}
+
+.custom-container .card-area .card1 .image {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.custom-container .card-area .card1 .user-details {
+  line-height: 20px;
+  padding: 20px;
+}
+
+.custom-container .card-area .card1 .user-details .user-name-edit {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+.custom-container .card-area .card1 .user-details .user-name-edit .user-name {
+  width: 200px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-container .card-area .card1 .user-details .user-name-edit .edit {
+  position: absolute;
+  right: 0;
+  font-size: 14px;
+  color: orange;
+}
+
+.custom-container .card-area .card1 .user-details .user-name-edit .edit:hover {
+  cursor: pointer;
+}
+
+.custom-container .card-area .card1 .user-details .user-position {
+  width: 56%;
+  line-height: 18px;
+  padding-top: 5px;
+}
+
+.custom-container .card-area .card2 {
+  height: 100px;
+  border: 2px solid #d5d5d5;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0 30px;
+}
+
+.custom-container .card-area .card2 .interest-area .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-container .card-area .card2 .interest-area .interest-tag {
+  padding: 0;
+  padding-top: 5px;
+}
+
+.custom-container .card-area .card2 .interest-area .interest-tag:nth-child(odd) span {
+  background-color: #e8caf1;
+}
+
+.custom-container .card-area .card2 .interest-area .interest-tag span {
+  background-color: #aef0e2;
+  padding: 1px 5px;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.custom-container .card-area .card3 {
+  height: 100px;
+}
+
+.custom-container .card-area .card3 .contribution-area {
+  width: 50%;
+}
+
+.custom-container .card-area .card3 .contribution-area .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-container .card-area .card3 .contribution-area .contribution-tag-area {
+  padding-left: 10px;
+}
+
+.custom-container .card-area .card3 .contribution-area .contribution-tag-area .contribution-tag {
+  padding: 5px 0;
+  color: #000000;
+}
+
+.custom-container .card-area .card3 .contribution-area .contribution-tag-area .contribution-tag div {
+  border: 1px solid #d5d5d5;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.custom-container .card-area .card3 .contribution-area .contribution-tag-area .contribution-tag div .value {
+  color: tomato;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-container .card-area .card3 .contribution-area .contribution-tag-area .contribution-tag div .text {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .card2 {
+    border-left: 0 !important;
+  }
+  .interest-tag span {
+    font-size: 8px !important;
+  }
+  .contribution-area {
+    width: 100% !important;
+  }
+  .contribution-area .contribution-tag {
+    padding: 0 0 5px 0 !important;
+  }
+  .contribution-area .contribution-tag div .value {
+    font-size: 10px !important;
+  }
+  .contribution-area .contribution-tag div .text {
+    font-size: 8px !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .card2 {
+    border-left: 0 !important;
+  }
+  .interest-tag span {
+    font-size: 8px !important;
+  }
+  .contribution-area {
+    width: 100% !important;
+  }
+  .contribution-area .contribution-tag-area {
+    padding-top: 5px;
+  }
+  .contribution-area .contribution-tag {
+    padding: 0 0 5px 0 !important;
+  }
+  .contribution-area .contribution-tag div .value {
+    font-size: 10px !important;
+  }
+  .contribution-area .contribution-tag div .text {
+    font-size: 8px !important;
+  }
+}
+
+/* Landscape */
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Google Pixel ----------- */
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  .card2 {
+    border-left: 0 !important;
+  }
+  .interest-tag span {
+    font-size: 8px !important;
+  }
+  .contribution-area {
+    width: 100% !important;
+  }
+  .contribution-area .contribution-tag {
+    padding: 0 0 5px 0 !important;
+  }
+  .contribution-area .contribution-tag div .value {
+    font-size: 10px !important;
+  }
+  .contribution-area .contribution-tag div .text {
+    font-size: 8px !important;
+  }
+}
+
+/* Portrait */
+/* Landscape */
+/* ----------- Google Pixel XL ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S3 ----------- */
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 2) {
+  .card2 {
+    border-left: 0 !important;
+  }
+  .interest-tag span {
+    font-size: 8px !important;
+  }
+  .contribution-area {
+    width: 100% !important;
+  }
+  .contribution-area .contribution-tag {
+    padding: 0 0 5px 0 !important;
+  }
+  .contribution-area .contribution-tag div .value {
+    font-size: 10px !important;
+  }
+  .contribution-area .contribution-tag div .text {
+    font-size: 8px !important;
+  }
+}
+
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- Galaxy S6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/*# sourceMappingURL=styles.css.map */

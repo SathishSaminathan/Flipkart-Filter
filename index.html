@@ -5,91 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./filter.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-    />
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./filter.js"></script>
   </head>
   <body>
-    <div class="custom-container">
-      <div class="row">
-        <div class="col-md-12 card-area-cont">
-          <div class="welcome">
-            Welcome Manju
+    <!-- <div class="button"><span>click me</span></div> -->
+    <div class="filter-container">
+      <div class="header">
+        <div class="sort-by">
+          <div class="sort-by-btn">
+            <i class="fas fa-sort-amount-down"></i>Sort By
           </div>
-          <div class="row card-area">
-            <div class="col-md-4 col-sm-12 col-xs-12 card1">
-              <img
-                class="image"
-                src="https://randomuser.me/api/portraits/men/78.jpg"
-              />
-              <div class="user-details">
-                <div class="user-name-edit">
-                  <span class="user-name">Manju Rangaraju</span>
-                  <span class="edit">Edit</span>
+        </div>
+        <div class="filter-by">
+          <div class="filter-by-btn">
+            <i class="fas fa-filter"></i>Filter By
+          </div>
+        </div>
+      </div>
+      <div id="myModal" class="sort-by-modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span>Sort Options</span>
+          </div>
+          <div class="modal-body">
+            <ul class="sort-options">
+              <li class="sort-option active">
+                <div class="radio-btn-area">
+                  <div class="radio-btn"></div>
+                  <div class="ripple"></div>
                 </div>
-                <div class="user-position">
-                  Computer Engineer Coimbatore, India
+                <div class="content">Course for you</div>
+              </li>
+              <li class="sort-option">
+                <div class="radio-btn-area">
+                  <div class="radio-btn"></div>
+                  <div class="ripple"></div>
                 </div>
-              </div>
+                <div class="content">Most searched</div>
+              </li>
+              <li class="sort-option">
+                <div class="radio-btn-area">
+                  <div class="radio-btn"></div>
+                  <div class="ripple"></div>
+                </div>
+                <div class="content">Application closing soon</div>
+              </li>
+              <li class="sort-option">
+                <div class="radio-btn-area">
+                  <div class="radio-btn"></div>
+                  <div class="ripple"></div>
+                </div>
+                <div class="content">Fees</div>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <div class="cancel">Cancel</div>
+            <div class="apply">Apply</div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-by-modal">
+        <div class="modal-header">
+          <div class="left">
+            <div class="filter-close-btn">
+              <i class="fa fa-times filter-icon"></i>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-6 card2">
-              <div class="interest-area row">
-                <div class="title">Interests</div>
-                <div class="interest-tag col-md-3 col-xs-6">
-                  <span>Data Science</span>
-                </div>
-                <div class="interest-tag col-md-3 col-xs-6">
-                  <span>Data Science</span>
-                </div>
-                <div class="interest-tag col-md-3 col-xs-6">
-                  <span>Data Science</span>
-                </div>
-                <div class="interest-tag col-md-3 col-xs-6">
-                  <span>Data Science</span>
-                </div>
+            <span class="filter-text" data-text="Back">Filter</span>
+          </div>
+          <div class="right"><span>Clear</span></div>
+        </div>
+        <div class="modal-body">
+          <ul class="filter-options">
+            <li class="filter-option">
+              <div class="left">
+                <span class="filter-title">Department</span
+                ><span class="filtered-value">Agriculture</span>
               </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-6 card3">
-              <div class="contribution-area">
-                <div class="title">Contributions</div>
-                <div class="contribution-tag-area row">
-                  <div class="contribution-tag col-md-6 col-sm-6 col-xs-6">
-                    <div>
-                      <span class="value">10</span>
-                      <span class="text">Referrals</span>
-                    </div>
-                  </div>
-                  <div class="contribution-tag col-md-6 col-sm-6 col-xs-6">
-                    <div>
-                      <span class="value">10</span>
-                      <span class="text">Referrals</span>
-                    </div>
-                  </div>
-                  <div class="contribution-tag col-md-6 col-sm-6 col-xs-6">
-                    <div>
-                      <span class="value">10</span>
-                      <span class="text">Referrals</span>
-                    </div>
-                  </div>
-                  <div class="contribution-tag col-md-6 col-sm-6 col-xs-6">
-                    <div>
-                      <span class="value">10</span>
-                      <span class="text">Referrals</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="right"><i class="fas fa-arrow-right"></i></div>
+            </li>
+            <li class="filter-option">
+              <div class="left">
+                <span class="filter-title">Course type</span
+                ><span class="filtered-value">Agriculture</span>
               </div>
-            </div>
+              <div class="right"><i class="fas fa-arrow-right"></i></div>
+            </li>
+            <li class="filter-option">
+              <div class="left">
+                <span class="filter-title">Graduation type</span
+                ><span class="filtered-value">Agriculture</span>
+              </div>
+              <div class="right"><i class="fas fa-arrow-right"></i></div>
+            </li>
+            <li class="filter-option">
+              <div class="left">
+                <span class="filter-title">Duration</span
+                ><span class="filtered-value">Agriculture</span>
+              </div>
+              <div class="right"><i class="fas fa-arrow-right"></i></div>
+            </li>
+            <li class="filter-option">
+              <div class="left">
+                <span class="filter-title">Attendance</span
+                ><span class="filtered-value">Agriculture</span>
+              </div>
+              <div class="right"><i class="fas fa-arrow-right"></i></div>
+            </li>
+          </ul>
+          <div class="select-option-area">
+            <ul class="select-options">
+              <li class="select-option">
+                <div class="select-left">
+                  <span class="filter-title">Department</span>
+                </div>
+                <div class="select-right">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </li>
+              <li class="select-option">
+                <div class="select-left">
+                  <span class="filter-title">Department</span>
+                </div>
+                <div class="select-right">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div>
+            <div class="no-of-results">5 results</div>
+            <button class="apply-btn">apply</button>
           </div>
         </div>
       </div>

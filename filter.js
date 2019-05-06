@@ -79,6 +79,7 @@ $(document).ready(function() {
     $(this)
       // .children(".select-left")
       // .toggleClass("active-color");
+      // .toggleClass('active-color').siblings().removeClass('active-color')
       .toggleClass('active-color')
   });
 });
